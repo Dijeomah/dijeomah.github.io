@@ -1460,7 +1460,7 @@
                   </li>
                 </ul>
                 <p class="copyright-text mt-3 mb-5">
-                  2021 ©. RectCV Template. Developed and Designed by
+                  <span id="footer-date"></span> ©. RectCV Template. Developed and Designed by
                   <b>themesuccess</b>
                 </p>
               </div>
@@ -1552,5 +1552,10 @@
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/switcher.js"></script>
+
+    <script>
+        const d = new Date();
+        document.getElementById("footer-date").innerHTML = d.getFullYear();
+        </script>
   </body>
 </html>
