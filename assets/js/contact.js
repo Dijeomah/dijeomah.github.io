@@ -39,7 +39,7 @@ $(function () {
 
     if (!that.sended) {
       $.ajax({
-        url: "php/form.php",
+        url: "form.php",
         type: "POST",
         data: form.serialize(),
         success: function (response) {
