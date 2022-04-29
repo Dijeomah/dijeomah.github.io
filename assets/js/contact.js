@@ -29,20 +29,24 @@ $(function () {
   var that = this;
 
   var form = $("#contact-form"),
-    successMessage = "Message Send",
+    successMessage = "Message Sent",
     warningMessage = "Something wrong! Please try later";
 
   form.on("submit", function (event) {
     /*Change URL address if you need*/
 
+    var headers = {}
     contact_state("loading");
 
     if (!that.sended) {
       $.ajax({
         url: "https://githubhost.000webhostapp.com/form.php",
         type: "POST",
+        mode: 'cors',
+        headers: headers,
         data: form.serialize(),
         success: function (response) {
+          console.log(response);
           var d = JSON.parse(response);
           if (d.status == "success") {
             custom_alert(successMessage, "success");
