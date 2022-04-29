@@ -39,7 +39,7 @@ $(function () {
 
     if (!that.sended) {
       $.ajax({
-        url: "form.php",
+        url: "https://githubhost.000webhostapp.com/form.php",
         type: "POST",
         data: form.serialize(),
         success: function (response) {
