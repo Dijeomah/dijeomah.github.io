@@ -35,15 +35,14 @@ $(function () {
   form.on("submit", function (event) {
     /*Change URL address if you need*/
 
-    var headers = {}
+    var headers = {'Content-Type': 'application/x-www-form-urlencoded'};
     contact_state("loading");
 
     if (!that.sended) {
       $.ajax({
         url: "https://githubhost.000webhostapp.com/form.php",
-        type: "POST",
-        mode: 'cors',
         headers: headers,
+        type: "POST",    
         data: form.serialize(),
         success: function (response) {
           console.log(response);
